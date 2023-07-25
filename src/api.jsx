@@ -16,3 +16,13 @@ export const getPokemonData = async (url) => {
     console.log('error');
   }
 };
+
+export const searchPokemon = async (pokemon) => {
+  try {
+    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+    const response = await fetch(url);
+    return await response.json();
+  } catch (err) {
+    console.log('error');
+  }
+};

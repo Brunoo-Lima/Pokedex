@@ -6,7 +6,7 @@ const Pokemons = (props) => {
     <li className="col-lg-2 col-md-3 list-unstyled card m-2 p-2 text-center bg-light">
       <h4 className="text-capitalize">{pokemon.name}</h4>
       <img
-        className="w-90 m-auto"
+        className="m-auto"
         src={pokemon.sprites.front_default}
         alt={pokemon.name}
       />

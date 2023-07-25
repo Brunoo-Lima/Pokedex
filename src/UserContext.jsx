@@ -19,7 +19,7 @@ export const Provider = ({ children }) => {
     fetchPokemon();
   }, []);
 
-  const value = { pokemons, setPokemons };
+  const value = { pokemons, setPokemons, fetchPokemon };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

@@ -7,8 +7,6 @@ const Home = () => {
 
   return (
     <div className="text-dark">
-      <div>input</div>
-
       <div>
         <Pokedex pokemons={pokemons} />
       </div>
