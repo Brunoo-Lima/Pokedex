@@ -22,7 +22,7 @@ const Pokedex = (props) => {
   return (
     <div>
       <div className="container">
-        <div>
+        <div className="row">
           <Pagination
             page={page + 1}
             totalPages={totalPages}
@@ -30,7 +30,7 @@ const Pokedex = (props) => {
             onRightClick={onRightClickHandler}
           />
         </div>
-        <ul className="row justify-content-center">
+        <ul className="row justify-content-center m-auto">
           {pokemons &&
             pokemons.map((pokemon, index) => (
               <Pokemons key={index} pokemon={pokemon} />

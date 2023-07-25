@@ -1,4 +1,5 @@
 import { Provider } from './UserContext';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 
@@ -10,6 +11,7 @@ const App = () => {
         <main>
           <Home />
         </main>
+        <Footer />
       </Provider>
     </>
   );

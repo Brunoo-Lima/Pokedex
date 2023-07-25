@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { UserContext } from '../../UserContext';
 import { searchPokemon } from '../../api';
-
+import { AiOutlineSearch } from 'react-icons/ai';
 const Input = () => {
   const [search, setSearch] = useState('');
   const { fetchPokemon, setPokemons } = useContext(UserContext);
@@ -38,11 +38,11 @@ const Input = () => {
           required
         />
         <button
-          className="btn btn-outline-secondary"
+          className="btn btn-primary"
           id="btn-search"
           onClick={onChangeSearchPokemon}
         >
-          Button
+          <AiOutlineSearch />
         </button>
       </div>
     </form>

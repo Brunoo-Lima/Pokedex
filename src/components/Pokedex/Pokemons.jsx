@@ -2,8 +2,9 @@
 
 const Pokemons = (props) => {
   const { pokemon } = props;
+
   return (
-    <li className="col-lg-2 col-md-3 list-unstyled card m-2 p-2 text-center bg-light">
+    <li className="col-lg-2 col-md-3 list-unstyled card m-2 p-2 text-center box-shadow bg-light">
       <h4 className="text-capitalize">{pokemon.name}</h4>
       <img
         className="m-auto"
@@ -11,6 +12,7 @@ const Pokemons = (props) => {
         alt={pokemon.name}
       />
       <span className="fst-italic text-secondary mt-2">#{pokemon.id}</span>
+
       <p className="fw-lighter mb-2">{pokemon.types[0].type.name}</p>
     </li>
   );

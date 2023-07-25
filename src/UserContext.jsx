@@ -8,7 +8,7 @@ export const Provider = ({ children }) => {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
 
-  const pokePerPage = 50;
+  const pokePerPage = 25;
 
   async function fetchPokemon() {
     const data = await getPokemon(pokePerPage, pokePerPage * page);
