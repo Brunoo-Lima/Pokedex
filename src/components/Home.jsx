@@ -1,7 +1,19 @@
-import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../UserContext';
+import Pokedex from './Pokedex/Pokedex';
 
 const Home = () => {
-  return <div>Home</div>;
+  const { pokemons } = useContext(UserContext);
+
+  return (
+    <div className="text-dark">
+      <div>input</div>
+
+      <div>
+        <Pokedex pokemons={pokemons} />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
