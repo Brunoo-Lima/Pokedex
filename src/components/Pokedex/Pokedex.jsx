@@ -4,8 +4,8 @@ const Pokedex = (props) => {
   const { pokemons } = props;
   return (
     <div>
-      <div>
-        <ul>
+      <div className="container">
+        <ul className="row justify-content-center">
           {pokemons &&
             pokemons.map((pokemon, index) => (
               <Pokemons key={index} pokemon={pokemon} />
