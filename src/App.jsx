@@ -5,15 +5,15 @@ import Home from './components/Home';
 
 const App = () => {
   return (
-    <>
+    <div className="body">
       <Provider>
         <Header />
-        <main>
+        <main className="main">
           <Home />
         </main>
         <Footer />
       </Provider>
-    </>
+    </div>
   );
 };
 

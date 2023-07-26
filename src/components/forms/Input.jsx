@@ -2,9 +2,10 @@ import { useContext, useState } from 'react';
 import { UserContext } from '../../UserContext';
 import { searchPokemon } from '../../api';
 import { AiOutlineSearch } from 'react-icons/ai';
+
 const Input = () => {
   const [search, setSearch] = useState('');
-  const { fetchPokemon, setPokemons } = useContext(UserContext);
+  const { fetchPokemon, pokemons, setPokemons } = useContext(UserContext);
 
   function onChangeSearch({ target }) {
     setSearch(target.value);
@@ -25,6 +26,20 @@ const Input = () => {
     handleSearch(search);
   }
 
+  //outra forma de pesquisar
+  // function pokemonFilter(name) {
+  //   let filteredPokemon = [];
+  //   if (name === '') {
+  //     fetchPokemon();
+  //   }
+  //   for (let i in pokemons) {
+  //     if (pokemons[i].name.includes(name)) {
+  //       filteredPokemon.push(pokemons[i]);
+  //     }
+  //   }
+  //   setPokemons(filteredPokemon);
+  // }
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <div className="input-group">
@@ -34,6 +49,7 @@ const Input = () => {
           placeholder="Busca por nome ou id"
           aria-label="Busca por nome ou id"
           aria-describedby="btn-search"
+          // onChange={(e) => pokemonFilter(e.target.value)}
           onChange={onChangeSearch}
           required
         />

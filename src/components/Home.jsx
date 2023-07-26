@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="text-dark">
       <h1 className="text-center my-5 fs-1">Pokemons</h1>
-      <div>
+      <div className="pb-5">
         <Pokedex pokemons={pokemons} />
       </div>
     </div>
