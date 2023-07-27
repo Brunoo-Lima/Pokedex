@@ -5,7 +5,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 const Input = () => {
   const [search, setSearch] = useState('');
-  const { fetchPokemon, pokemons, setPokemons } = useContext(UserContext);
+  const { fetchPokemon, pokemons, setPokemons, setLoading } =
+    useContext(UserContext);
 
   function onChangeSearch({ target }) {
     setSearch(target.value);
@@ -14,7 +15,7 @@ const Input = () => {
 
   async function handleSearch(pokemon) {
     if (!pokemon) return fetchPokemon();
-    const result = await searchPokemon(pokemon);
+    const result = await searchPokemon(pokemon.toLowerCase());
     if (!result) {
       window.alert('Nenhum resultado encontrado! Digite novamente.');
     } else {

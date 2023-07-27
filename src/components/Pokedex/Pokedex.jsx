@@ -2,10 +2,11 @@ import { useContext } from 'react';
 import Pagination from '../Pagination';
 import Pokemons from './Pokemons';
 import { UserContext } from '../../UserContext';
+import Loading from '../utilities/Loading';
 
 const Pokedex = (props) => {
   const { pokemons } = props;
-  const { page, setPage, totalPages } = useContext(UserContext);
+  const { page, setPage, totalPages, loading } = useContext(UserContext);
 
   function onLeftClickHandler() {
     if (page > 0) {
@@ -20,24 +21,28 @@ const Pokedex = (props) => {
   }
 
   return (
-    <div>
-      <div className="container">
-        <div className="row">
-          <Pagination
-            page={page + 1}
-            totalPages={totalPages}
-            onLeftClick={onLeftClickHandler}
-            onRightClick={onRightClickHandler}
-          />
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="container">
+          <div className="row">
+            <Pagination
+              page={page + 1}
+              totalPages={totalPages}
+              onLeftClick={onLeftClickHandler}
+              onRightClick={onRightClickHandler}
+            />
+          </div>
+          <ul className="row justify-content-center m-auto px-0">
+            {pokemons &&
+              pokemons.map((pokemon, index) => (
+                <Pokemons key={index} pokemon={pokemon} />
+              ))}
+          </ul>
         </div>
-        <ul className="row justify-content-center m-auto">
-          {pokemons &&
-            pokemons.map((pokemon, index) => (
-              <Pokemons key={index} pokemon={pokemon} />
-            ))}
-        </ul>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
