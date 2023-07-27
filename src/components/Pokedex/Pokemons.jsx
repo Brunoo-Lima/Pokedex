@@ -11,7 +11,7 @@ const Pokemons = (props) => {
         src={pokemon.sprites.front_default}
         alt={pokemon.name}
       />
-      <span className="fst-italic text-secondary mt-2">#{pokemon.id}</span>
+      <span className="fst-italic text-secondary mt-2 fs-1">#{pokemon.id}</span>
 
       <p className="fw-lighter mb-2">{pokemon.types[0].type.name}</p>
     </li>
