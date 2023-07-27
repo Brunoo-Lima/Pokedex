@@ -5,8 +5,13 @@
 }
 
 img {
-  max-width: fit-content;
+  max-width: 100%;
   display: block;
+}
+
+.logo {
+  max-width: 100%;
+  width: 200px;
 }
 
 .box-shadow {

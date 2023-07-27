@@ -24,7 +24,7 @@ const Input = () => {
   }
 
   function onChangeSearchPokemon() {
-    handleSearch(search);
+    if (search != 0) handleSearch(search);
   }
 
   //outra forma de pesquisar
