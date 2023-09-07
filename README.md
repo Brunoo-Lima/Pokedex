@@ -1,8 +1,14 @@
-# React + Vite
+# Pokedex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto para mostrar uma lista de pokemon, atráves de paginação, e um sistema de busca por nome ou id.
 
-Currently, two official plugins are available:
+## Aprendizados
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Projeto realizado para praticar e solidificar conceitos do React e manipulação de Api. Foi um projeto bem desafiador e incrível de fazer. Não foquei tanto na estilização do site, porquê o foco maior era o React em sí.
+
+## Tecnologias
+
+- React
+- CSS
+- Api
+
